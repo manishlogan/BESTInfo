@@ -1,0 +1,66 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".SearchBySourceAndDestinationActivity" 
+    android:id="@+id/srcDestLayout">
+
+    <AutoCompleteTextView
+        android:id="@+id/autoCompleteTextView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:ems="10"
+        android:hint="@string/enter_src_name" >
+
+        <requestFocus />
+    </AutoCompleteTextView>
+    
+    <AutoCompleteTextView
+        android:id="@+id/autoCompleteTextView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/autoCompleteTextView1"
+        android:ems="10"
+        android:hint="@string/enter_dest_name" >
+    </AutoCompleteTextView>
+
+    <ListView
+        android:id="@+id/srcStops"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/autoCompleteTextView2"
+        android:layout_below="@+id/button1" 
+        android:divider="@color/Gray"
+        android:dividerHeight="1dp">
+    </ListView>
+
+    <Button
+        android:id="@+id/button1"
+        style="@style/button_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/autoCompleteTextView2"
+        android:layout_below="@+id/autoCompleteTextView2"
+        android:background="@drawable/red_button"
+        android:onClick="search"
+        android:text="@string/search" />
+
+    <Button
+        android:id="@+id/indirectRoutesButton"
+        style="@style/button_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/button1"
+        android:layout_alignBottom="@+id/button1"
+        android:layout_toRightOf="@+id/button1"
+        android:background="@drawable/red_button"
+        android:text="@string/indirect_routes" 
+        android:visibility="invisible"
+        android:onClick="findIndirectRoutes"/>
+</RelativeLayout>

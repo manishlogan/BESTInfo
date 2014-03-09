@@ -1,0 +1,63 @@
+[1mdiff --git a/AMTSInfo/AndroidManifest.xml b/AMTSInfo/AndroidManifest.xml[m
+[1mindex e0f5f53..1217b4b 100644[m
+[1m--- a/AMTSInfo/AndroidManifest.xml[m
+[1m+++ b/AMTSInfo/AndroidManifest.xml[m
+[36m@@ -2,14 +2,14 @@[m
+ <manifest xmlns:android="http://schemas.android.com/apk/res/android"[m
+     package="com.logan.amtsinfo"[m
+     android:versionCode="1"[m
+[31m-    android:versionName="1.0">[m
+[31m-	[m
+[32m+[m[32m    android:versionName="1.1" >[m
+[32m+[m
+     <uses-permission android:name="android.permission.INTERNET" />[m
+     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />[m
+     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />[m
+[31m-	[m
+[32m+[m
+     <uses-sdk[m
+[31m-        android:minSdkVersion="11"[m
+[32m+[m[32m        android:minSdkVersion="8"[m
+         android:targetSdkVersion="17" />[m
+ [m
+     <application[m
+[36m@@ -19,7 +19,8 @@[m
+         android:theme="@style/AppTheme" >[m
+         <activity[m
+             android:name="com.logan.amtsinfo.MainActivity"[m
+[31m-            android:label="@string/app_name" android:screenOrientation="portrait">[m
+[32m+[m[32m            android:label="@string/app_name"[m
+[32m+[m[32m            android:screenOrientation="portrait" >[m
+             <intent-filter>[m
+                 <action android:name="android.intent.action.MAIN" />[m
+ [m
+[36m@@ -28,7 +29,8 @@[m
+         </activity>[m
+         <activity[m
+             android:name="com.logan.amtsinfo.SearchByNumber"[m
+[31m-            android:label="@string/title_activity_search_by_number" android:screenOrientation="portrait">[m
+[32m+[m[32m            android:label="@string/title_activity_search_by_number"[m
+[32m+[m[32m            android:screenOrientation="portrait" >[m
+         </activity>[m
+         <activity[m
+             android:name="com.logan.amtsinfo.FeedbackActivity"[m
+[36m@@ -36,11 +38,17 @@[m
+         </activity>[m
+         <activity[m
+             android:name="com.logan.amtsinfo.SearchByLocationActivity"[m
+[31m-            android:label="@string/title_activity_search_by_location" android:screenOrientation="portrait">[m
+[32m+[m[32m            android:label="@string/title_activity_search_by_location"[m
+[32m+[m[32m            android:screenOrientation="portrait" >[m
+         </activity>[m
+         <activity[m
+             android:name="com.logan.amtsinfo.SearchBySourceAndDestinationActivity"[m
+[31m-            android:label="@string/title_activity_search_by_source_and_destination" android:screenOrientation="portrait">[m
+[32m+[m[32m            android:label="@string/title_activity_search_by_source_and_destination"[m
+[32m+[m[32m            android:screenOrientation="portrait" >[m
+[32m+[m[32m        </activity>[m
+[32m+[m[32m        <activity[m
+[32m+[m[32m            android:name="com.logan.amtsinfo.BusDetailsActivity"[m
+[32m+[m[32m            android:label="@string/title_activity_bus_details" >[m
+         </activity>[m
+     </application>[m
+ [m
